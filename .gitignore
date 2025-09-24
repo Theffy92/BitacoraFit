@@ -1,0 +1,25 @@
+    # Log files
+    *.log
+    logs/
+
+    # Temporary files
+    *.tmp
+    *.temp
+
+    # Build artifacts
+    build/
+    dist/
+    target/
+
+    # IDE and OS specific files
+    .DS_Store
+    .idea/
+    .vscode/
+    Thumbs.db
+
+    # Node.js dependencies
+    node_modules/
+
+    # Python virtual environments
+    venv/
+    .venv/
