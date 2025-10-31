@@ -1,0 +1,70 @@
+Goal: Prepare a starting point for a Django + HTMX + Tailwind + PostgreSQL project called BitacoraFit.
+Important: Do not generate a full app. Create only the minimum files and TODOs so I can code the rest.
+
+Create (and keep code minimal):
+
+README.md with 10–12 line quickstart: Python version, uv/venv setup, install, runserver.
+
+pyproject.toml with dependencies commented (Django, django-htmx, djangorestframework, psycopg[binary], python-dotenv, black, ruff). No huge config.
+
+.env.example with placeholders: DJANGO_SECRET_KEY, DATABASE_URL=postgres://postgres:postgres@localhost:5432/bitacorafit, DEBUG=1.
+
+docker-compose.yml only for Postgres (no web/worker): name db, port 5432, volume, healthcheck.
+
+Makefile with just these targets (short commands, no magic):
+setup, run, migrate, createsuperuser, lint, fmt.
+For setup, include the commands to: create venv, install deps from pyproject.toml (assume pip for now), and export .env locally.
+
+Create a placeholder project layout (no real code):
+
+bitacorafit/          # project root (empty placeholders)
+  src/
+    apps/             # where apps will live
+    core/             # settings will go here later
+    templates/        # base.html later
+    static/           # tailwind later
+  scripts/
+    bootstrap.sh      # tiny script that runs: django-admin startproject, creates first app
+
+
+Put TODO comments in each folder with 1–2 lines telling me what to put there later.
+
+Additionally, create tiny stubs (only stubs, no full implementations):
+
+scripts/bootstrap.sh:
+
+Bash script that (1) checks for Django, (2) runs django-admin startproject config src/, (3) creates logs app, (4) prints next steps.
+
+Keep it short; don’t write the full project for me.
+
+src/templates/_keep.txt and src/static/_keep.txt so folders exist (or use .gitkeep).
+
+.vscode/extensions.json recommending Python, Ruff, EditorConfig.
+
+Constraints:
+
+No giant code dumps. Prefer TODO comments and tiny placeholders.
+
+Don’t wire Tailwind or Celery yet; just leave a TODO in README for “Add Tailwind via npm later”.
+
+Do not create actual Django settings or models — I will write them.
+
+Use plain, simple make targets and brief comments.
+
+Finish by appending to README:
+
+“Next steps” checklist (my tasks):
+
+Run bash scripts/bootstrap.sh
+
+Create .env from .env.example
+
+Add Django settings and config/settings.py (DEBUG, DB)
+
+Register logs app
+
+Create first model FoodItem and run migrations
+
+Add base template and an index view with HTMX snippet
+
+Only output the files’ contents. No explanations.

@@ -1,0 +1,2 @@
+# TODO: Django settings (base.py, dev.py, prod.py) will go here
+# Configure DEBUG, DATABASES, INSTALLED_APPS, MIDDLEWARE, etc.

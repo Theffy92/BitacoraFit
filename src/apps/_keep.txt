@@ -1,0 +1,1 @@
+# TODO: Django apps will be created here (accounts, logs, ai, api)

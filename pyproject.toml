@@ -1,0 +1,30 @@
+[project]
+name = "bitacorafit"
+version = "0.1.0"
+description = "BitacoraFit - Nutrition and fitness tracking"
+requires-python = ">=3.11"
+dependencies = [
+    "Django>=5.0,<6.0",
+    "django-htmx>=1.17",
+    "djangorestframework>=3.14",
+    "psycopg[binary]>=3.1",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0",
+    "ruff>=0.1",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"

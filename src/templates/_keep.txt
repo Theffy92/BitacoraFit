@@ -1,0 +1,2 @@
+# TODO: Add base.html with Tailwind CDN and HTMX script tags
+# Include partials for navigation, forms, etc.
