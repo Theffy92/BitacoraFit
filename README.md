@@ -1,11 +1,15 @@
 # BitacoraFit
+## What BitacoraFit will be
+A personal nutrition, weight, and fasting web app optimized for repeat meals and custom food accuracy.
 
-Nutrition and fitness tracking — a production-ready starter scaffold for Django + HTMX + Tailwind + PostgreSQL + DRF + Celery + Redis.
+## What this project is so far
+A production-ready starter scaffold for Django + HTMX + Tailwind + PostgreSQL + DRF + Celery + Redis.
 
 ## Planned MVP Features
 1. Weight tracking
-2. Meal logging
-3. Basic dashboard
+2. Meal logging with reusable custom meals
+3. Fasting window tracking
+4. Dashboard/Home summary
 
 ## Planned MVP architecture (what this project will become)
 
