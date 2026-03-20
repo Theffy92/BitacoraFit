@@ -7,7 +7,7 @@ __pycache__/
 venv/
 env/
 ENV/
-.venv
+.venv/
 *.egg-info/
 dist/
 build/
@@ -16,12 +16,20 @@ build/
 # Django
 *.log
 db.sqlite3
+*.sqlite3
 media/
 staticfiles/
 
 # Environment
 .env
+.env.*
 .env.local
+
+# Testing
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
 
 # IDE
 .vscode/
@@ -37,3 +45,6 @@ Thumbs.db
 # Node (for Tailwind later)
 node_modules/
 package-lock.json
+
+.python-version
+logs/
