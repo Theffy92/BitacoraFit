@@ -60,3 +60,6 @@ A production-ready starter scaffold for Django + HTMX + Tailwind + PostgreSQL + 
 
 (To-do)
 
+## Additional Features (Notes)
+1. Add a body measurement section
+2. Body measurement guide
