@@ -1,0 +1,44 @@
+/* BitacoraFit Main Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-primary: #E9E1FF;
+    --card-dark: #211B4B;
+    --btn-purple: #7B11F1;
+    --text-accent: #FFA500;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+}
+
+.font-bebas {
+    font-family: 'Bebas+Neue', cursive;
+}
+
+.card-purple {
+    background-color: var(--card-dark);
+}
+
+.btn-purple {
+    background-color: var(--btn-purple);
+}
+
+.text-accent {
+    color: var(--text-accent);
+}
+
+/* Custom components */
+.sidebar-item-active {
+    @apply bg-purple-100 text-purple-700 font-semibold;
+}
+
+.card-common {
+    @apply bg-white rounded-[2rem] shadow-sm transition-shadow;
+}
+
+.card-common:hover {
+    @apply shadow-md;
+}
