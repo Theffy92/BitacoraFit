@@ -94,7 +94,7 @@
                     <div class="h-48 w-full flex items-end justify-between gap-2 px-2">
                         <!-- Simple visual bars to represent entries -->
                         {% for entry in recent_entries|slice:":5" reversed %}
-                        <div class="w-full bg-purple-100 rounded-t-lg relative group transition-all" style="height: {{ entry.weight|subtract:150|multiply:2 }}px">
+                        <div class="w-full bg-purple-100 rounded-t-lg relative group transition-all" style="--bar-height: {{ entry.weight|subtract:150|multiply:2 }}px">
                           <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100">{{ entry.weight }}</div>
                         </div>
                         {% endfor %}
