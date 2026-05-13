@@ -168,16 +168,6 @@ The following technologies are planned for future iterations as the project grow
 - Amazon S3
 - Redis/ElastiCache
 
-## AI & Intelligent Features
-
-Potential future AI integrations may include:
-
-- AI-generated progress summaries
-- AI-assisted reflections
-- Conversational logging
-- LLM-powered insights
-- Embeddings and retrieval-augmented workflows
-
 # Project Status
 
 The project is currently in the early development and architecture phase.
