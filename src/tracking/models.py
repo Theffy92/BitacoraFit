@@ -13,3 +13,6 @@ class WeightEntry(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.date}: {self.weight} lbs"
+    
+    class Meta:
+        ordering = ['-date', '-created_at']  # Default ordering by date and creation time, newest first
