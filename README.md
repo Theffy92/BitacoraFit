@@ -187,6 +187,6 @@ The project is intentionally being developed iteratively in order to balance:
 - and long-term maintainability.
 
 ### Current progress (as of May 15 2026)
-![Dashboard](assets/screenshots/Screenshot%202026-05-15%20at%204.08.34%20PM.png)
-![Weight Entry](assets/screenshots/Screenshot%202026-05-15%20at%204.08.46%20PM.png)
-![Trend Visualization](assets/screenshots/Screenshot%202026-05-15%20at%204.09.23%20PM.png)
+![Dashboard](assets/screenshots/dashboard.png)
+![Weight Entry](assets/screenshots/weight_entry.png)
+![Trend Visualization](assets/screenshots/trends.png)
