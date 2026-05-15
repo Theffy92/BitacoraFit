@@ -97,8 +97,7 @@ The following features are planned for future iterations and are intentionally o
 ### Expanded Health Tracking
 - Fasting tracking
 - Nutrition and meal tracking (Meal logging with reusable custom meals)
-- Mood tracking
-- Hunger tracking
+- Mood tracking- Hunger tracking
 - Sleep tracking
 - Energy tracking
 
@@ -186,3 +185,8 @@ The project is intentionally being developed iteratively in order to balance:
 - sustainable scope management
 - product thinking
 - and long-term maintainability.
+
+### Current progress (as of May 15 2026)
+![Dashboard](assets/screenshots/Screenshot%202026-05-15%20at%204.08.34%20PM.png)
+![Weight Entry](assets/screenshots/Screenshot%202026-05-15%20at%204.08.46%20PM.png)
+![Trend Visualization](assets/screenshots/Screenshot%202026-05-15%20at%204.09.23%20PM.png)
