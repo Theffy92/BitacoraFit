@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -10,8 +12,6 @@
   */
 @source "../../../**/*.{html,py,js}";
 /* BitacoraFit Main Theme */
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
     --bg-primary: #E9E1FF;
@@ -26,9 +26,14 @@ body {
 }
 
 .font-bebas {
-    font-family: 'Bebas+Neue', cursive;
+    font-family: 'Bebas Neue', cursive;
 }
-
+.font-guides {
+    font-family: 'Edu AU VIC WA NT Guides', cursive;
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 .card-purple {
     background-color: var(--card-dark);
 }
