@@ -142,4 +142,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+LOGIN_REDIRECT_URL = 'weight_dashboard'
+LOGOUT_REDIRECT_URL = 'login'

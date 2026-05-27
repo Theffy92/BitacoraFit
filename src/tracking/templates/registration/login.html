@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Login</h2>
+
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <div class="space-y-4">
+            {{ form.as_p }}
+        </div>
+
+        <button type="submit" class="w-full mt-6 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">
+            Sign In
+        </button>
+    </form>
+</div>
+{% endblock %}
