@@ -1,0 +1,78 @@
+{% load static tailwind_tags django_browser_reload %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitacoraFit | Log Weight</title>
+    {% tailwind_css %}
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-800">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white border-b sticky top-0 z-40">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+                <div>
+                    <p class="text-xs uppercase tracking-[0.2em] text-slate-400 font-bebas">BitacoraFit</p>
+                    <h1 class="text-2xl font-bebas tracking-wide">Log Weight</h1>
+                </div>
+                <a href="{% url 'weight_dashboard' %}" class="text-sm font-semibold text-purple-600 hover:text-purple-700">Back to dashboard</a>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 py-10 sm:py-14">
+                <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] items-start">
+                    <section class="card-purple rounded-[2rem] p-8 sm:p-10 text-white relative overflow-hidden">
+                        <div class="relative z-10">
+                            <p class="text-xs uppercase tracking-[0.2em] font-bebas text-purple-300 mb-3">New Entry</p>
+                            <h2 class="text-4xl sm:text-6xl font-bebas leading-none mb-4">Track today’s weight</h2>
+                            <p class="text-purple-100 max-w-md">Save a new weight entry to build your history and unlock future charts and trends.</p>
+                        </div>
+                    </section>
+
+                    <section class="bg-white rounded-[2rem] shadow-sm p-6 sm:p-8">
+                        <form method="post" class="space-y-5">
+                            {% csrf_token %}
+
+                            {% if form.non_field_errors %}
+                                <div class="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                                    {{ form.non_field_errors }}
+                                </div>
+                            {% endif %}
+
+                            <div>
+                                <label for="{{ form.date.id_for_label }}" class="block text-sm font-semibold text-slate-700">Date</label>
+                                {{ form.date }}
+                                {% if form.date.errors %}
+                                    <p class="mt-2 text-sm text-red-600">{{ form.date.errors|striptags }}</p>
+                                {% endif %}
+                            </div>
+
+                            <div>
+                                <label for="{{ form.weight.id_for_label }}" class="block text-sm font-semibold text-slate-700">Weight (lbs)</label>
+                                {{ form.weight }}
+                                {% if form.weight.errors %}
+                                    <p class="mt-2 text-sm text-red-600">{{ form.weight.errors|striptags }}</p>
+                                {% endif %}
+                            </div>
+
+                            <div>
+                                <label for="{{ form.notes.id_for_label }}" class="block text-sm font-semibold text-slate-700">Notes</label>
+                                {{ form.notes }}
+                                {% if form.notes.errors %}
+                                    <p class="mt-2 text-sm text-red-600">{{ form.notes.errors|striptags }}</p>
+                                {% endif %}
+                            </div>
+
+                            <button type="submit" class="btn-purple w-full text-white px-6 py-3 rounded-2xl font-bold shadow-lg shadow-purple-200 hover:opacity-90 transition-opacity">
+                                Save Weight Entry
+                            </button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    {% django_browser_reload_script %}
+</body>
+</html>

@@ -1,7 +1,7 @@
-from django.shortcuts import render
-from django.contrib.auth.models import User
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import WeightEntry
+from .forms import WeightEntryForm
 
 # Create your views here.
 @login_required
@@ -18,3 +18,18 @@ def weight_dashboard(request):
         'latest_entry': latest_entry,
         'recent_entries': recent_entries
     })
+
+
+@login_required
+def log_weight(request):
+    if request.method == "POST":
+        form = WeightEntryForm(request.POST)
+        if form.is_valid():
+            entry = form.save(commit=False)
+            entry.user = request.user
+            entry.save()
+            return redirect("weight_dashboard")
+    else:
+        form = WeightEntryForm()
+
+    return render(request, "tracking/log_weight.html", {"form": form})
