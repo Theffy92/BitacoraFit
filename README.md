@@ -186,7 +186,28 @@ The project is intentionally being developed iteratively in order to balance:
 - product thinking
 - and long-term maintainability.
 
-### Current progress (as of May 15 2026)
-![Dashboard](assets/screenshots/dashboard.png)
-![Weight Entry](assets/screenshots/weight_entry.png)
-![Trend Visualization](assets/screenshots/trends.png)
+### Visual Evolution
+
+BitacoraFit has moved from early layout exploration to a cleaner, more focused tracking experience.
+
+#### v1 — Early interface exploration
+
+![v1 Dashboard](assets/screenshots/v1-dashboard.png)
+*Early dashboard concept with a bold sidebar, a large current-weight card, and the first pass at trend visualization.*
+
+![v1 Log Weight](assets/screenshots/v1-weightentrylog_page.png)
+*Initial weight-entry flow with a split layout that separated context from data entry.*
+
+![v1 Weight Entry Cards](assets/screenshots/v1-weight_entry.png)
+*First history view showing recent entries as large cards with weight, notes, and date details.*
+
+![v1 Trends](assets/screenshots/v1-trends.png)
+*Early trend visualization exploring how progress could be summarized over time.*
+
+#### v2 — Refined current interface
+
+![v2 Dashboard](assets/screenshots/v2-dashboard.png)
+*Refined dashboard with clearer hierarchy, improved spacing, and a more polished progress summary.*
+
+![v2 Weight Entry Cards](assets/screenshots/v2-weight_entry.png)
+*Current entry-list design with denser history, stronger readability, and a more mature visual system.*
