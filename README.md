@@ -210,4 +210,4 @@ BitacoraFit has moved from early layout exploration to a cleaner, more focused t
 *Refined dashboard with clearer hierarchy, improved spacing, and a more polished progress summary.*
 
 ![v2 Weight Entry Cards](assets/screenshots/v2-weight_entry.png)
-*Current entry-list design with denser history, stronger readability, and a more mature visual system.*
+*Current entry-list design with denser history, stronger readability, and a more mature visual system. Trying to simulate an actual notebook page.*
