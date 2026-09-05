@@ -16,7 +16,8 @@ def weight_dashboard(request):
     recent_entries = weight_entries[1:7]  # Get the next few recent entries
     return render(request, 'tracking/weight_dashboard.html', {
         'latest_entry': latest_entry,
-        'recent_entries': recent_entries
+        'recent_entries': recent_entries,
+        'total_entries': weight_entries.count(),
     })
 
 
