@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from django.utils import timezone
-from .models import WeightEntry
+from ..models import WeightEntry
 from decimal import Decimal
 
 # Create your tests here.
@@ -27,4 +27,3 @@ class WeightEntryModelTest(TestCase):
             weight=Decimal('150.75')
         )
         self.assertIsNone(entry.notes)
-
