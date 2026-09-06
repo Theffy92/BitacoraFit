@@ -100,26 +100,26 @@ class TrackingViewTests(TestCase):
 class WeightHistoryViewTests(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(
-			username="test-user",
-			password="test-password",
-		)
+            username="test-user",
+            password="test-password",
+        )
         self.client.force_login(self.user)
     
     def test_weight_history_shows_only_current_users_entries(self):
         other_user = get_user_model().objects.create_user(
-			username="other-user",
-			password="other-password",
-		)
+            username="other-user",
+            password="other-password",
+        )
         current_entry = WeightEntry.objects.create(
-			user=self.user,
-			date="2026-09-05",
-			weight=Decimal("150.75"),
-		)
+            user=self.user,
+            date="2026-09-05",
+            weight=Decimal("150.75"),
+        )
         WeightEntry.objects.create(
-			user=other_user,
-			date="2026-09-06",
-			weight=Decimal("180.25"),
-		)
+            user=other_user,
+            date="2026-09-06",
+            weight=Decimal("180.25"),
+        )
 
         response = self.client.get(reverse("weight_history"))
 
