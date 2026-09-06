@@ -34,3 +34,11 @@ def log_weight(request):
         form = WeightEntryForm()
 
     return render(request, "tracking/log_weight.html", {"form": form})
+
+@login_required
+def weight_history(request):
+    user = request.user
+    weight_entries = WeightEntry.objects.filter(user=user)
+    return render(request, "tracking/weight_history.html", {
+        "weight_entries": weight_entries
+    })
