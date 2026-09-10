@@ -42,7 +42,16 @@
 
                             <div>
                                 <label for="{{ form.date.id_for_label }}" class="block text-sm font-semibold text-slate-700">Date</label>
-                                {{ form.date }}
+                                    <div class="mt-1 flex items-center gap-2">
+                                        {{ form.date }}
+                                        <button
+                                            type="button"
+                                            class="shrink-0 rounded-2xl border border-purple-200 px-4 py-3 text-sm font-semibold text-purple-600 transition hover:bg-purple-50 focus:outline-none focus:ring-4 focus:ring-purple-100"
+                                            onclick="setCurrentDate()"
+                                        >
+                                            Current date
+                                        </button>
+                                    </div>
                                 {% if form.date.errors %}
                                     <p class="mt-2 text-sm text-red-600">{{ form.date.errors|striptags }}</p>
                                 {% endif %}
@@ -73,6 +82,16 @@
             </div>
         </main>
     </div>
+        <script>
+            function setCurrentDate() {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = String(today.getMonth() + 1).padStart(2, "0");
+                const day = String(today.getDate()).padStart(2, "0");
+
+                document.getElementById("{{ form.date.id_for_label }}").value = `${year}-${month}-${day}`;
+            }
+        </script>
     {% django_browser_reload_script %}
 </body>
 </html>
