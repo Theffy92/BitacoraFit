@@ -6,19 +6,29 @@ BitacoraFit brings weight tracking, menstrual-cycle records, food intake, moveme
 
 The project is in active development and is transitioning from a Django-template web application to a cross-platform application built with React Native, Expo, and TypeScript, supported by a Django API and PostgreSQL.
 
-## Why BitacoraFit?
+## Project Purpose
 
-BitacoraFit began as a personal project motivated by the need to bring useful tracking features together in one application, with core functionality available for free.
+BitacoraFit is primarily a personal project, built to support my own tracking needs.
 
-Weight records alone do not capture a person's experience. Cycle dates, changes in routines, food intake, movement, and personal observations can provide additional context when reviewing progress.
+The goal is to bring features I need into one application, with an emphasis on exploring weight fluctuations alongside menstrual-cycle information and everyday experiences.
+
+A public release may be considered in the future. Features and architecture will evolve as I develop and use the application.
+
+## Why a Logbook?
 
 The idea behind the name *bitácora*—a logbook—is central to the product: a place to record, reflect, and explore patterns without treating every daily fluctuation as a success or failure.
 
+Weight records alone do not capture a person's experience. Cycle dates, changes in routines, food intake, movement, and personal observations can provide additional context when reviewing progress.
+
+BitacoraFit aims to make those records easier to explore together.
+
 ## Intended Audience
 
-BitacoraFit is primarily designed for people who menstruate and want to explore weight fluctuations alongside their menstrual-cycle records.
+The primary use case is my own tracking and reflection.
 
-The planned experience will allow users to leave cycle information unknown or incomplete. Recorded information and app-generated estimates will be clearly distinguished.
+The broader product concept is designed for people who menstruate and want to explore weight fluctuations alongside their menstual-cycle records.
+
+Cycle information will be optional and may be incomplete or unknown. User-recorded information and app-generated estimates will be clearly distinguished.
 
 ## Product Principles
 
@@ -30,7 +40,9 @@ The planned experience will allow users to leave cycle information unknown or in
 - **Privacy and user control:** Treat personal records as sensitive and design access controls accordingly.
 - **Accessible across devices:** Support phones, tablets, and desktop browsers with appropriate layouts.
 
-## Planned Core Features — Free
+## Planned Core Features
+
+These features describe the product vision. They are not all implemented and will be developed incrementally.
 
 ### Accounts and Personal Context
 
@@ -79,9 +91,7 @@ Exploring weight and cycle records together is a central part of BitacoraFit's p
 - Explore weight and cycle records together.
 - Review summaries calculated from recorded data without requiring AI.
 
-These features describe the planned product. They are not all implemented, and they will be developed incrementally.
-
-## Planned AI Guide — Optional Paid Subscription
+## Planned AI Guide
 
 An optional AI guide will help users explore their records conversationally and access general educational context.
 
@@ -95,9 +105,17 @@ Planned capabilities include:
 
 The AI guide will distinguish observations in a user's records from general educational explanations. It will not present associations as proof of causation or estimated cycle phases as confirmed facts.
 
-Core tracking and reflection features will remain available for free. Users will be able to try the AI guide through a free trial before deciding whether to subscribe.
+AI implementation and usage will depend on development priorities and operating costs.
 
-Trial duration, AI usage allowances, subscription pricint, and any payment requirements will be defined before launch.
+## Potential Public-Release Model
+
+If BitacoraFit is eventually offered to the public:
+
+- Core tracking, reflections, visualizations, and basic summaries will remain free.
+- AI assistance will be available through an optional paid subscription.
+- A free trial will allow users to explore the AI guide before deciding whether to subscribe.
+
+Pricing, trial duration, payment requirements, and usage allowances would be determined before public release. Billing and trial management are outside the current personal-use scope.
 
 ## Health Information Boundaries
 
@@ -195,6 +213,8 @@ Technology choices will be driven by product requirements and maintainability.
 
 ## Project Status
 
-**Active development — transitioning the architecture.**
+**Active development — preparing the architecture transition.**
 
 The current repository contains the initial Django web implementation. The React Native client, API transition, menstrual-cycle features, food tracking, movement tracking, and AI guide are planned work unless explicitly identified as implemented above.
+
+
