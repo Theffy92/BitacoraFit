@@ -1,213 +1,220 @@
 # BitacoraFit
-## What BitacoraFit will be
-BitacoraFit will be a reflection-first health tracking webapp focused on helping users better understand long-term progress without becoming overwhelmed by daily fluctuations.
-Rather than emphasizing strict tracking or perfection, this project is meant to encourage a more sustainable and contextual approach to long-term health and weight management through trend visualization, reflections, and gradual progress awareness.
 
-This project is currently in active development.
+**A personal logbook for understanding weight changes in context.**
 
-## MVP Scope (Planned)
-The current MVP focuses on building a reflection-first weight tracking web application designed to help users track long-term progress in a calmer and more sustainable way.
+BitacoraFit brings weight tracking, menstrual-cycle records, food intake, movement, and personal reflections into one place. Its central purpose is to help users explore their progress over time with more context than a number on a scale can provide.
 
-The MVP is intentionally focused and iterative in order to prioritize:
-- strong engineering foundations
-- manageable project scope
-- thoughtful product design
-- real-word deployment experience
-### Planned MVP Features
-#### Authentication & User Accounts
-- User sign up, login, and logout
-- User-specific dashboards and data
-#### Weight Tracking
-Users will be able to:
-- Create weight entries
-- Edit weight entries
-- Delete weight entries
-- View weight history over time
+The project is in active development and is transitioning from a Django-template web application to a cross-platform application built with React Native, Expo, and TypeScript, supported by a Django API and PostgreSQL.
 
-Each entry may include:
+## Project Purpose
 
-- Weight value
-- Date
-- Optional reflections/notes
+BitacoraFit is primarily a personal project, built to support my own tracking needs.
 
-#### Reflection-Based Tracking
+The goal is to bring features I need into one application, with an emphasis on exploring weight fluctuations alongside menstrual-cycle information and everyday experiences.
 
-The MVP will support optional reflections and contextual notes to help users better understand long-term patterns and progress.
+A public release may be considered in the future. Features and architecture will evolve as I develop and use the application.
 
-Examples may include:
+## Why a Logbook?
 
-- stress
-- travel
-- poor sleep
-- lifestyle changes
-- emotional reflections
+The idea behind the name *bitácora*—a logbook—is central to the product: a place to record, reflect, and explore patterns without treating every daily fluctuation as a success or failure.
 
-#### Weight Trend Visualization
+Weight records alone do not capture a person's experience. Cycle dates, changes in routines, food intake, movement, and personal observations can provide additional context when reviewing progress.
 
-Users will be able to visualize:
+BitacoraFit aims to make those records easier to explore together.
 
-- Weight history
-- Long-term trends
-- Progress over time
+## Intended Audience
 
-The goal is to reduce emotional overwhelm caused by normal day-to-day fluctuations.
+The primary use case is my own tracking and reflection.
 
-#### Basic Progress Insights
+The broader product concept is designed for people who menstruate and want to explore weight fluctuations alongside their menstual-cycle records.
 
-The MVP will include simple trend-based summaries such as:
+Cycle information will be optional and may be incomplete or unknown. User-recorded information and app-generated estimates will be clearly distinguished.
 
-- progress over time
-- long-term trend direction
-- basic progress statistics
+## Product Principles
 
-These insights will initially be rule-based rather than AI-generated.
+- **Context alongside numbers:** Bring tracking records and personal observations together.
+- **Long-term perspective:** Make it easier to review progress beyond individual weigh-ins.
+- **Optional reflection:** Allow users to add context without requiring extensive journaling.
+- **Free core functionality:** Keep tracking, history, visualizations, reflections, and basic summaries free.
+- **Transparent uncertainty:** Distinguish recorded facts, estimates, and possible explanations.
+- **Privacy and user control:** Treat personal records as sensitive and design access controls accordingly.
+- **Accessible across devices:** Support phones, tablets, and desktop browsers with appropriate layouts.
 
-#### Responsive Web Application
+## Planned Core Features
 
-The project is being developed as a responsive web application accessible across desktop and mobile browsers.
+These features describe the product vision. They are not all implemented and will be developed incrementally.
 
-#### Deployment
+### Accounts and Personal Context
 
-The application is planned to be publicly deployed to demonstrate:
+- Sign up, log in, and log out.
+- Access user-specific records and dashboards.
+- Optionally describe personal weight history, goals, and tracking preferences.
+- Update personal information and preferences.
 
-- production readiness
-- cloud deployment knowledge
-- full-stack integration
+### Weight Tracking
 
-### MVP Philosophy
+- Create, edit, and delete weight entries.
+- Record dates and optional notes.
+- Review weight history and trends.
+- Explore changes across selected time periods.
 
-Rather than focusing only on calorie counting or strict tracking, the MVP aims to encourage:
+### Menstrual-Cycle Tracking and Context
 
-- progress trends over daily fluctuations
-- contextual reflections
-- reduced emotional overwhelm
-- long-term consistency
-- sustainable health tracking habits
+- Record period dates.
+- View cycle records alongside weight history.
+- Compare weight patterns across recorded cycles.
+- Distinguish user-recorded information from any estimated cycle information.
+- Support missing or uncertain records without forcing a phase assignment.
 
-## Future Features (Roadmap)
+Exploring weight and cycle records together is a central part of BitacoraFit's planned experience.
 
-The following features are planned for future iterations and are intentionally outside the MVP scope.
+### Food and Calorie Tracking
 
-### AI-Assisted Features
-- AI-generated progress summaries
-- AI-assisted reflections and insights
-- Conversational logging
-- Reduced-friction tracking workflows
+- Log food and calorie intake.
+- Create reusable foods and meals.
+- Review intake history alongside other tracking records.
 
-### Expanded Health Tracking
-- Fasting tracking
-- Nutrition and meal tracking (Meal logging with reusable custom meals)
-- Mood tracking- Hunger tracking
-- Sleep tracking
-- Energy tracking
+### Movement Tracking
 
-### Body Measurements & Non-Scale Progress
-- Body measurements tracking
-- Non-scale victory tracking
-- Additional progress visualizations
+- Record exercise and other movement.
+- Review activity records alongside weight, cycle information, and reflections.
 
-### Goal Tracking
-- Goal weights
-- Milestone tracking
-- Long-term progress tracking
+### Reflections
 
-### Advanced Analytics
-- Moving averages
-- Trend smoothing
-- Advanced progress analytics
-- Additional data visualizations
+- Add optional notes about experiences such as travel, stress, sleep, or routine changes.
+- Review reflections alongside tracking history.
+- Record progress and observations beyond weight.
 
-### Menstrual Cycle Awareness
+### Visualizations and Basic Summaries
 
-Future contextual tracking may include:
+- View weight charts and historical comparisons.
+- Explore weight and cycle records together.
+- Review summaries calculated from recorded data without requiring AI.
 
-- menstrual cycle awareness
-- cycle-related fluctuation tracking
-- hunger and energy pattern tracking
+## Planned AI Guide
 
-### Accessibility & Internationalization
-- Multilingual support
-- English and Spanish support
-- Accessibility improvements
+An optional AI guide will help users explore their records conversationally and access general educational context.
 
-### Mobile Experience
-Dedicated mobile application
-Improved mobile-first experiences
+Planned capabilities include:
 
-## Technical Stack
-### Current / MVP Stack
-#### Backend
-- Django
-#### Frontend
-- Django Templates
-- HTMX
-- Tailwind CSS
-#### Database
-- PostgreSQL
-#### Data Visualization
-- Charting library for weight trend visualization
-#### Deployment
+- Summarizing selected periods of tracking history.
+- Highlighting observations across recorded weight, cycle, food, movement, and reflection data.
+- Helping users compare their records across time.
+- Offering reflection prompts.
+- Explaining possible reasons for fluctuations while communicating uncertainty.
 
-Planned deployment stack:
+The AI guide will distinguish observations in a user's records from general educational explanations. It will not present associations as proof of causation or estimated cycle phases as confirmed facts.
 
-- AWS
-- Docker
-- Amazon RDS
+AI implementation and usage will depend on development priorities and operating costs.
 
-### Future / Extended Architecture
+## Potential Public-Release Model
 
-The following technologies are planned for future iterations as the project grows in complexity and feature scope.
+If BitacoraFit is eventually offered to the public:
 
-#### API Layer
-- Django REST Framework (DRF)
-#### Background Tasks & Async Processing
-- Celery
-- Redis
-#### Cloud & Storage
-- Amazon S3
-- Redis/ElastiCache
+- Core tracking, reflections, visualizations, and basic summaries will remain free.
+- AI assistance will be available through an optional paid subscription.
+- A free trial will allow users to explore the AI guide before deciding whether to subscribe.
 
-# Project Status
+Pricing, trial duration, payment requirements, and usage allowances would be determined before public release. Billing and trial management are outside the current personal-use scope.
 
-The project is currently in the early development and architecture phase.
+## Health Information Boundaries
 
-Current development priorities include:
+BitacoraFit is intended for personal tracking, reflection, and general education. It is not intended to diagnose conditions, prescribe treatment, or provide personalized medical or nutritional advice.
 
-- defining MVP scope
-- building core backend foundations
-- implementing weight tracking features
-- improving engineering workflow
-- preparing for deployment
+The application will not claim to determine the medical cause of a weight change from tracking records.
 
-The project is intentionally being developed iteratively in order to balance:
+AI-generated explanations may be incomplete or incorrect. The planned experience will communicate those limitations and avoid presenting generated output as a clinical assessment.
 
-- software engineering learning
-- sustainable scope management
-- product thinking
-- and long-term maintainability.
+## Platforms and Design Approach
 
-### Visual Evolution
+The planned application will support:
 
-BitacoraFit has moved from early layout exploration to a cleaner, more focused tracking experience.
+- iOS phones and iPads.
+- Android phones and tablets.
+- Web browsers on mobile and desktop devices.
 
-#### v1 — Early interface exploration
+Development will follow a mobile-first design approach, with layouts adapted for larger screens.
 
-![v1 Dashboard](assets/screenshots/v1-dashboard.png)
-*Early dashboard concept with a bold sidebar, a large current-weight card, and the first pass at trend visualization.*
+The goal is to share application logic and suitable interface components across platforms while allowing platform-specific behavior and layouts where needed.
 
-![v1 Log Weight](assets/screenshots/v1-weightentrylog_page.png)
-*Initial weight-entry flow with a split layout that separated context from data entry.*
+## Technical Architecture
 
-![v1 Weight Entry Cards](assets/screenshots/v1-weight_entry.png)
-*First history view showing recent entries as large cards with weight, notes, and date details.*
+### Current Implementation
 
-![v1 Trends](assets/screenshots/v1-trends.png)
-*Early trend visualization exploring how progress could be summarized over time.*
+The repository currently contains a Django-template application with:
 
-#### v2 — Refined current interface
+- A `WeightEntry` model associated with a user.
+- Weight-entry creation with optional notes.
+- A login-protected dashboard.
+- A login-protected weight-history page.
+- Queries scoped to the authenticated user.
+- Django authentication routes.
+- Tailwind CSS and DaisyUI styling.
+- Tests covering tracking models, forms, and views.
 
-![v2 Dashboard](assets/screenshots/v2-dashboard.png)
-*Refined dashboard with clearer hierarchy, improved spacing, and a more polished progress summary.*
+### Planned Architecture
 
-![v2 Weight Entry Cards](assets/screenshots/v2-weight_entry.png)
-*Current entry-list design with denser history, stronger readability, and a more mature visual system. Trying to simulate an actual notebook page.*
+| Layer | Technology | Responsibility |
+|---|---|---|
+| Client | React Native, Expo, TypeScript | Screens, navigation, forms, and client-side interactions across mobile and web |
+| Backend | Django | Business logic, validation, accounts, and data access |
+| API | Django REST Framework | Authenticated communication between the client and backend |
+| Database | PostgreSQL | Persistent storage of user records |
+| AI integration | Backend-managed service integration; provider undecided | AI requests, subscription checks, and usage controls |
+
+The client will communicate with Django through an API. Django will enforce permissions, validate requests, and access PostgreSQL.
+
+Database credentials and AI service credentials will remain on the backend.
+
+Authentication details, deployment infrastructure, charting libraries, and subscription infrastructure will be selected as their requirements are defined.
+
+## Transition Plan
+
+The existing Django implementation will be evolved incrementally.
+
+1. Document the product direction and planned architecture.
+2. Verify the existing backend behavior and tests.
+3. Introduce authenticated API endpoints for weight records.
+4. Create the Expo application.
+5. Connect the client to the API.
+6. Validate the first complete tracking flow on mobile and web.
+7. Expand the product around weight and menstrual-cycle context.
+8. Add food, movement, and reflection capabilities incrementally.
+9. Introduce the optional AI guide after the core experience is established.
+
+Existing templates will remain available during the initial transition. Changes to the interface do not require discarding the existing data models or database.
+
+### First Technical Milestone
+
+An authenticated user can:
+
+- View their own weight history.
+- Create a weight entry.
+- See the saved entry in their history.
+- Complete this flow on a phone and in a desktop browser.
+
+The backend must prevent access to another user's records.
+
+## Development Goals
+
+BitacoraFit is both a meaningful personal product and an opportunity to practice:
+
+- Product discovery and scope management.
+- Cross-platform interface development.
+- API design and integration.
+- Relational data modeling.
+- Authentication and authorization.
+- Testing important application behavior.
+- Privacy-conscious handling of sensitive records.
+- Deployment and maintainability.
+- Responsible integration of AI features.
+
+Technology choices will be driven by product requirements and maintainability.
+
+## Project Status
+
+**Active development — preparing the architecture transition.**
+
+The current repository contains the initial Django web implementation. The React Native client, API transition, menstrual-cycle features, food tracking, movement tracking, and AI guide are planned work unless explicitly identified as implemented above.
+
+
