@@ -95,7 +95,9 @@ Planned capabilities include:
 
 The AI guide will distinguish observations in a user's records from general educational explanations. It will not present associations as proof of causation or estimated cycle phases as confirmed facts.
 
-Core tracking and reflection features will remain available without an AI subscription. Subscription pricing and usage allowances have not yet been defined.
+Core tracking and reflection features will remain available for free. Users will be able to try the AI guide through a free trial before deciding whether to subscribe.
+
+Trial duration, AI usage allowances, subscription pricint, and any payment requirements will be defined before launch.
 
 ## Health Information Boundaries
 
