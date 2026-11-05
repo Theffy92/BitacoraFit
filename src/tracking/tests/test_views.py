@@ -97,6 +97,7 @@ class TrackingViewTests(TestCase):
         self.assertEqual(response.context["latest_entry"], latest_entry)
         self.assertEqual(list(response.context["recent_entries"]), [oldest_entry])
 
+
 class WeightHistoryViewTests(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(
@@ -104,7 +105,7 @@ class WeightHistoryViewTests(TestCase):
             password="test-password",
         )
         self.client.force_login(self.user)
-    
+
     def test_weight_history_shows_only_current_users_entries(self):
         other_user = get_user_model().objects.create_user(
             username="other-user",
@@ -124,4 +125,6 @@ class WeightHistoryViewTests(TestCase):
         response = self.client.get(reverse("weight_history"))
 
         self.assertIn(current_entry, response.context["weight_entries"])
-        self.assertNotIn(WeightEntry.objects.get(user=other_user), response.context["weight_entries"])
+        self.assertNotIn(
+            WeightEntry.objects.get(user=other_user), response.context["weight_entries"]
+        )
