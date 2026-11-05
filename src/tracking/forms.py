@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django import forms
 
 from .models import WeightEntry
@@ -6,8 +8,8 @@ from .models import WeightEntry
 class WeightEntryForm(forms.ModelForm):
 	class Meta:
 		model = WeightEntry
-		fields = ["date", "weight", "notes"]
-		widgets = {
+		fields: ClassVar[list[str]] = ["date", "weight", "notes"]
+		widgets: ClassVar[dict[str, forms.Widget]] = {
 			"date": forms.DateInput(
 				attrs={
 					"type": "date",

@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -15,6 +17,7 @@ class WeightEntry(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.date}: {self.weight} lbs"
+    fields: ClassVar[list[str]] = ["user", "date", "weight", "notes", "created_at"]
 
     class Meta:
-        ordering = ['-date', '-created_at']  # Default ordering by date and creation time, newest first
+        ordering: ClassVar[list[str]] = ['-date', '-created_at']  # Default ordering by date and creation time, newest first
