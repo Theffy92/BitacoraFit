@@ -18,8 +18,6 @@ class WeightEntry(models.Model):
     def __str__(self):
         return f"{self.user.username} - {self.date}: {self.weight} lbs"
 
-    fields: ClassVar[list[str]] = ["user", "date", "weight", "notes", "created_at"]
-
     class Meta:
         ordering: ClassVar[list[str]] = [
             "-date",
