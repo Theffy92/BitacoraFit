@@ -218,3 +218,6 @@ Technology choices will be driven by product requirements and maintainability.
 The current repository contains the initial Django web implementation. The React Native client, API transition, menstrual-cycle features, food tracking, movement tracking, and AI guide are planned work unless explicitly identified as implemented above.
 
 
+## Documentation
+
+- [Django backend baseline](docs/development/backend-baseline.md)
