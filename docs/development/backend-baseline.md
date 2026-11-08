@@ -8,8 +8,7 @@
 - Predecessor baseline issue: [#56](https://github.com/Theffy92/BitacoraFit/issues/56)
 - Python version: 3.11.0
 - Django version: 5.2.19
-- Database: PostgreSQL, configured through environment variables; the server version was not
-  recorded during these checks
+- Database: PostgreSQL 14.18 (Homebrew), configured through environment variables
 
 This baseline covers the existing Django application before the
 API transition.
@@ -102,7 +101,6 @@ development database is not used for test data.
 
 ## Known Limitations or Blockers
 
-- The PostgreSQL server version was not captured.
 - The application is still the pre-API Django-template implementation;
   API implementation and client migration remain out of scope.
 
