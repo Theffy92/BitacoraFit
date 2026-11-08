@@ -2,12 +2,12 @@
 
 ## Reference
 
-- Verified on: 2026-11-06
+- Verified on: 2026-11-08
 - Branch: `chore/document-backend-baseline`
 - Related issue: [#64](https://github.com/Theffy92/BitacoraFit/issues/64)
 - Predecessor baseline issue: [#56](https://github.com/Theffy92/BitacoraFit/issues/56)
 - Python version: 3.11.0
-- Django version: 5.2.12
+- Django version: 5.2.19
 - Database: PostgreSQL, configured through environment variables; the server version was not
   recorded during these checks
 
@@ -58,8 +58,8 @@ The `.env` file contains local values and must not be committed.
 
 | Check | Command | Observed result |
 |---|---|---|
-| Django system checks | `python manage.py check` | Passed; no issues reported. |
-| Tracking tests | `python manage.py test tracking` | Passed; 9 tests ran successfully. |
+| Django system checks | `python manage.py check` | Passed on 2026-11-08; no issues reported. |
+| Tracking tests | `python manage.py test tracking` | Passed on 2026-11-08; 9 tests ran successfully. |
 | Migration status | `python manage.py showmigrations` | Passed; all listed migrations for `admin`, `auth`, `contenttypes`, `sessions`, and `tracking` are applied. |
 | Ruff lint checks | `ruff check .` | Passed. |
 | Black formatting | `black --check .` | Passed; 23 files would be left unchanged. |
@@ -74,12 +74,13 @@ Start commands:
    changing into `src`:
    `python manage.py runserver`
 
-- Application starts with Tailwind watcher and Django server: Not rerun as
-  part of this documentation update.
-- Login works: Not rerun as part of this documentation update.
-- Dashboard displays the signed-in user's records: Not rerun as part of this documentation update.
-- Weight-entry creation works: Not rerun as part of this documentation update.
-- Weight history displays records: Not rerun as part of this documentation update.
+- Application starts with Tailwind watcher and Django server: Passed on
+  2026-11-08; Django served the application at `http://127.0.0.1:8000/`.
+- Login works: Passed on 2026-11-08; login redirected to the dashboard.
+- Dashboard displays the signed-in user's records: Passed on 2026-11-08.
+- Weight-entry creation works: Passed on 2026-11-08; a weight entry was
+  submitted successfully and redirected to the dashboard.
+- Weight history displays records: Passed on 2026-11-08.
 
 Use a development account and fictional entries for manual checks.
 
@@ -101,7 +102,6 @@ development database is not used for test data.
 
 ## Known Limitations or Blockers
 
-- Manual browser checks were not rerun during this documentation update.
 - The PostgreSQL server version was not captured.
 - The application is still the pre-API Django-template implementation;
   API implementation and client migration remain out of scope.
