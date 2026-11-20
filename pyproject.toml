@@ -7,6 +7,7 @@ dependencies = [
     "Django>=5.0,<6.0",
     "django-htmx>=1.17",
     "djangorestframework>=3.14",
+    "django-cors-headers",
     "psycopg[binary]>=3.1",
     "python-dotenv>=1.0",
 ]
