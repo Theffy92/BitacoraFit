@@ -96,6 +96,5 @@ class LogoutView(APIView):
             AUTH_TOKEN_COOKIE_NAME,
             path="/api/auth/",
             samesite="Lax",
-            secure=not settings.DEBUG,
         )
         return response
