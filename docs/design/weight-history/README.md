@@ -14,6 +14,8 @@ Design draft for [issue #61](https://github.com/Theffy92/BitacoraFit/issues/61),
 
 The user leaves with their own records in view and can reflect on what they wrote around each weigh-in.
 
+The API's login, logout, and mobile/browser credential handling are described in [API authentication](../../architecture/api-authentication.md).
+
 ## Wireframes
 
 The sample weights and notes are fictional. Each history card is a notebook page with a date, weight, unit, and optional note.

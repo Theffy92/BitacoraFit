@@ -18,9 +18,23 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
+from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
+
+from tracking.auth_views import (
+    CsrfTokenView,
+    CurrentUserView,
+    LoginView,
+    LogoutView,
+    TokenLoginView,
+)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/auth/csrf/", ensure_csrf_cookie(CsrfTokenView.as_view()), name="api_auth_csrf"),
+    path("api/auth/login/", csrf_protect(LoginView.as_view()), name="api_auth_login"),
+    path("api/auth/token/", TokenLoginView.as_view(), name="api_auth_token"),
+    path("api/auth/me/", CurrentUserView.as_view(), name="api_auth_me"),
+    path("api/auth/logout/", LogoutView.as_view(), name="api_auth_logout"),
     path("accounts/", include("django.contrib.auth.urls")),
     path("", include("tracking.urls")),
 ]

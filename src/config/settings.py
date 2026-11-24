@@ -125,16 +125,18 @@ AUTH_PASSWORD_VALIDATORS = [
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.TokenAuthentication",
+        "tracking.authentication.CookieTokenAuthentication",
     ],
 }
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://localhost:8081"
+    "http://localhost:8081",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
